@@ -136,7 +136,8 @@ echo $spent_clean;
 } else {  echo ('0');
 }
 
-?></p>
+?></p></div>
+
 
 <?php 
 $balance = $total_points - $spent_clean; ?>
@@ -152,7 +153,6 @@ $balance = $total_points - $spent_clean; ?>
 
 <p class="userstats">Total points</p>
 
-</div>
 
 
 

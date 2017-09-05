@@ -118,13 +118,7 @@
 <link rel="icon" type="image/x-icon" href="https://ssdp.org/wp-content/uploads/2015/12/ssdp_favicon.png">	
 	
 <link rel="canonical" href="https://cat.ssdp.org/" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="SSDP Chapter Activity Tracker" />
-<meta property="og:url" content="https://cat.ssdp.org/" />
-<meta property="og:site_name" content="SSDP CAT" />
-<meta name="twitter:card" content="" />
-<meta name="twitter:title" content="SSDP Chapter Activity Tracker" />
+
 
 <link rel='dns-prefetch' href='//s0.wp.com' />
 <link rel='dns-prefetch' href='//secure.gravatar.com' />
@@ -831,6 +825,9 @@ text-indent: -5em;
 								<li>
 									<a href="https://cat.ssdp.org/content/how-tofaq">How-to/FAQ</a>
 								</li>
+								<li>
+									<a href="https://cat.ssdp.org/store">Store</a>
+								</li>
 							</ul>
 					</div>
 				</div>
@@ -850,6 +847,9 @@ text-indent: -5em;
 				<li>
 					<a href="https://cat.ssdp.org/content/how-tofaq">How-to/FAQ</a>
 				</li>
+				<li>
+									<a href="https://cat.ssdp.org/store">Store</a>
+								</li>
 			</ul>
 		</div>
 	</header>

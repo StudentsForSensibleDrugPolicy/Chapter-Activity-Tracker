@@ -76,10 +76,10 @@ $total_pc_count_trimmed5 = str_replace('<ulclass="contextual-links"><liclass="vi
 
 //Get the High Quality stats 
 
-$database_host = '';
-$database_user = '';
-$database_password = '';
-$database_name = '';
+$database_host = 'mysql.cat.ssdp.org';
+$database_user = 'pointsssdporg';
+$database_password = '2qh7pK9B';
+$database_name = 'points_ssdp_org';
 
 $mysqli = mysqli_connect($database_host, $database_user, $database_password, $database_name) or die ('Could not connect to database server.');
 
@@ -227,10 +227,10 @@ echo '% HQ</td>
 ?>
 
 <?php
-$database_host = '';
-$database_user = '';
-$database_password = '';
-$database_name = '';
+$database_host = 'mysql.cat.ssdp.org';
+$database_user = 'pointsssdporg';
+$database_password = '2qh7pK9B';
+$database_name = 'points_ssdp_org';
 
 $mysqli = mysqli_connect($database_host, $database_user, $database_password, $database_name) or die ('Could not connect to database server.');
 

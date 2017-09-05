@@ -4,6 +4,9 @@
 #edit-title {
 	
 }
+
+#autocomplete { background-color: white !important; }
+
 td.chapter-name-leaderboard a.username{
 	
 }
@@ -93,7 +96,7 @@ VERTICAL PROGRESS BARS
 .vertical .progress-fill {
   position: relative;
   background: #FAA732;
-  height: 50%;
+  /*height: 50%;*/
   width: 120px;
   color: #fff;
   text-align: center;
@@ -14183,7 +14186,7 @@ h2.resp-accordion span.icon {
 
 .required {
 
-	color: #ff4242;
+	color: #000 !important;
 
 	font-weight: bold;
 

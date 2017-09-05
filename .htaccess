@@ -1,9 +1,9 @@
 #
 # Apache/PHP/Drupal settings:
 #
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} ^www\.cat\.ssdp\.org*
-RewriteRule ^(.*)$ https://cat.ssdp.org/$1 [L,R=301]
+#RewriteCond %{HTTPS} off [OR]
+#RewriteCond %{HTTP_HOST} ^www\.cat\.ssdp\.org*
+#RewriteRule ^(.*)$ https://cat.ssdp.org/$1 [L,R=301]
 
 # Protect files and directories from prying eyes.
 <FilesMatch "\.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\.(?!well-known).*|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock))$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig\.save)$">

@@ -156,7 +156,7 @@ function SSDPCAT_field__taxonomy_term_reference($variables) {
 }
 
 
-function YOURTHEME_suggestions_page_alter(&$suggestions, $variables) {
+function SSDPCAT_suggestions_page_alter(&$suggestions, $variables) {
   // Get current node
   $node = \Drupal::request()->attributes->get('node');
   if ($node) {

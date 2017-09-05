@@ -53,7 +53,15 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
   
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="SSDP Chapter Activity Tracker" />
+<meta property="og:url" content="https://cat.ssdp.org/" />
+<meta property="og:site_name" content="SSDP CAT" />
+<meta property="og:image" content="https://ssdp.org/wp-content/uploads/2017/02/SSDP-logo-letters-with-tag-blue-1.png" />
 
+<meta name="twitter:card" content="" />
+<meta name="twitter:title" content="SSDP Chapter Activity Tracker" />
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 <script>

@@ -72,9 +72,7 @@
  * - $page['triptych_first']: Items for the first triptych.
  * - $page['triptych_middle']: Items for the middle triptych.
  * - $page['triptych_last']: Items for the last triptych.
- * - $page['
- 
- _firstcolumn']: Items for the first footer column.
+ * - $page['footer_firstcolumn']: Items for the first footer column.
  * - $page['footer_secondcolumn']: Items for the second footer column.
  * - $page['footer_thirdcolumn']: Items for the third footer column.
  * - $page['footer_fourthcolumn']: Items for the fourth footer column.
@@ -261,7 +259,7 @@
 <link rel='stylesheet' id='boc-icon-css'  href='https://ssdp.org/wp-content/themes/fortuna/stylesheets/icons.css?ver=4.8' type='text/css' media='all' />
 <link rel='stylesheet' id='boc-main-styles-css'  href='https://ssdp.org/wp-content/themes/fortuna-child/style.css?ver=4.8' type='text/css' media='all' />
 <style id='boc-main-styles-inline-css' type='text/css'>
-* {font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;}
+	* {font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;}
 
 				#menu > ul > li > a {
 
@@ -786,7 +784,7 @@ text-indent: -5em;
 <div id="page-wrapper" style = "background-color: white"><div id="page">
 
  <!-- Header::START -->
-	<header  id="header" >
+	<header  id="header">
 		<!-- SubHeader -->
 		<div class="full_header">
 			<div class="container" id="subheader">
@@ -833,9 +831,9 @@ text-indent: -5em;
 								<li>
 									<a href="https://cat.ssdp.org/content/how-tofaq">How-to/FAQ</a>
 								</li>
-<li>
-					<a href="https://cat.ssdp.org/content/store">Store</a>
-				</li>
+								<li>
+									<a href="https://cat.ssdp.org/store">Store</a>
+								</li>
 							</ul>
 					</div>
 				</div>
@@ -855,49 +853,94 @@ text-indent: -5em;
 				<li>
 					<a href="https://cat.ssdp.org/content/how-tofaq">How-to/FAQ</a>
 				</li>
-<li>
-					<a href="https://cat.ssdp.org/content/store">Store</a>
+				<li>
+					<a href="https://cat.ssdp.org/store">Store</a>
 				</li>
 			</ul>
 		</div>
 	</header>
-<!-- End test code -->
+ <?php
+print render($page['header']);
+?>
+   
 
-  <?php if ($messages): ?>
-    <div id="messages"><div class="section clearfix">
-      <?php print $messages; ?>
-    </div></div> <!-- /.section, /#messages -->
-  <?php endif; ?>
+      </div> <!-- /.section, /#header -->
 
-  <?php if ($page['featured']): ?>
-    <div id="featured"><div class="section clearfix">
-      <?php print render($page['featured']); ?>
-    </div></div> <!-- /.section, /#featured -->
-  <?php endif; ?>
+  <?php
+if ($messages):
+?>
+   <div id="messages"><div class="section clearfix">
+      <?php
+    print $messages;
+?>
+   </div></div> <!-- /.section, /#messages -->
+  <?php
+endif;
+?>
 
-  <div id="main-wrapper" class="clearfix" style = "margin-top: 172px;"><div id="main" class="clearfix">
+  <?php
+if ($page['featured']):
+?>
+   <div id="featured"><div class="section clearfix">
+      <?php
+    print render($page['featured']);
+?>
+   </div></div> <!-- /.section, /#featured -->
+  <?php
+endif;
+?>
 
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
+  <div id="main-wrapper" class="clearfix" style="margin-top:172px;"><div id="main" class="clearfix">
 
-    <?php if ($page['sidebar_first']): ?>
-      <div id="sidebar-first" class="column sidebar"><div class="section">
-        <?php print render($page['sidebar_first']); ?>
-      </div></div> <!-- /.section, /#sidebar-first -->
-    <?php endif; ?>
+    <?php
+if ($breadcrumb):
+?>
+     <div id="breadcrumb"><?php
+    print $breadcrumb;
+?></div>
+    <?php
+endif;
+?>
+
+    <?php
+if ($page['sidebar_first']):
+?>
+     <div id="sidebar-first" class="column sidebar"><div class="section">
+        <?php
+    print render($page['sidebar_first']);
+?>
+     </div></div> <!-- /.section, /#sidebar-first -->
+    <?php
+endif;
+?>
 
     <div id="content" class="column"><div class="section">
-      <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
+      <?php
+if ($page['highlighted']):
+?><div id="highlighted"><?php
+    print render($page['highlighted']);
+?></div><?php
+endif;
+?>
+
       <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="title" id="page-title">
-          <?php print $title; ?> 
+      <?php
+print render($title_prefix);
+?>
+     <?php
+if ($title):
+?>
+       <h1 class="title" id="page-title">
+          <?php
+    print $title;
+?> 
           
           
-          <?php if ( !empty($node) && $node->type == 'stats') { } else { ?>
-          
+          <?php
+    if (!empty($node) && $node->type == 'stats') {
+    } else {
+?>
+         
           <span style="float:right;">
           <span style="margin-bottom:-5px; margin-top:10px; height:20px;">
           <a id="tweet-test" href="https://twitter.com/share" class="twitter-share-button" data-text="">Tweet</a>
@@ -905,66 +948,124 @@ text-indent: -5em;
 
 
 <div class="fb-share-button" data-href="" data-layout="button_count"></div></span>
-<?php } ?>
+<?php
+    }
+?>
 
 
 
 
 
         </h1>
-      <?php endif; ?>
-      
-      <?php print render($title_suffix); ?>
-      <?php if ($tabs): ?>
-        <div class="tabs">
-          <?php print render($tabs); ?>
-        </div>
-      <?php endif; ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links">
-          <?php print render($action_links); ?>
-        </ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
-      
+      <?php
+endif;
+?>
+     
+      <?php
+print render($title_suffix);
+?>
+     <?php
+if ($tabs):
+?>
+       <div class="tabs">
+          <?php
+    print render($tabs);
+?>
+       </div>
+      <?php
+endif;
+?>
+     <?php
+print render($page['help']);
+?>
+     <?php
+if ($action_links):
+?>
+       <ul class="action-links">
+          <?php
+    print render($action_links);
+?>
+       </ul>
+      <?php
+endif;
+?>
+     <?php
+print render($page['content']);
+?>
+     <?php
+print $feed_icons;
+?>
+     
 
     </div></div> <!-- /.section, /#content -->
 
-    <?php if ($page['sidebar_second']): ?>
-      <div id="sidebar-second" class="column sidebar"><div class="section">
-        <?php print render($page['sidebar_second']); ?>
-      </div></div> <!-- /.section, /#sidebar-second -->
-    <?php endif; ?>
+    <?php
+if ($page['sidebar_second']):
+?>
+     <div id="sidebar-second" class="column sidebar"><div class="section">
+        <?php
+    print render($page['sidebar_second']);
+?>
+     </div></div> <!-- /.section, /#sidebar-second -->
+    <?php
+endif;
+?>
 
   </div></div> <!-- /#main, /#main-wrapper -->
 
-  <?php if ($page['triptych_first'] || $page['triptych_middle'] || $page['triptych_last']): ?>
-    <div id="triptych-wrapper"><div id="triptych" class="clearfix">
-      <?php print render($page['triptych_first']); ?>
-      <?php print render($page['triptych_middle']); ?>
-      <?php print render($page['triptych_last']); ?>
-    </div></div> <!-- /#triptych, /#triptych-wrapper -->
-  <?php endif; ?>
+  <?php
+if ($page['triptych_first'] || $page['triptych_middle'] || $page['triptych_last']):
+?>
+   <div id="triptych-wrapper"><div id="triptych" class="clearfix">
+      <?php
+    print render($page['triptych_first']);
+?>
+     <?php
+    print render($page['triptych_middle']);
+?>
+     <?php
+    print render($page['triptych_last']);
+?>
+   </div></div> <!-- /#triptych, /#triptych-wrapper -->
+  <?php
+endif;
+?>
 
-   <div class="section"><div id="footer-wrapper" style = "background-color: #003249;">
+  <div id="footer-wrapper" style = "background-color: #003249;"><div class="section">
 
-    <?php if ($page['footer_firstcolumn'] || $page['footer_secondcolumn'] || $page['footer_thirdcolumn'] || $page['footer_fourthcolumn']): ?>
-      <div id="footer-columns" class="clearfix">
-        <?php print render($page['footer_firstcolumn']); ?>
-        <?php print render($page['footer_secondcolumn']); ?>
-        <?php print render($page['footer_thirdcolumn']); ?>
-        <?php print render($page['footer_fourthcolumn']); ?>
-      </div> <!-- /#footer-columns -->
-    <?php endif; ?>
+    <?php
+if ($page['footer_firstcolumn'] || $page['footer_secondcolumn'] || $page['footer_thirdcolumn'] || $page['footer_fourthcolumn']):
+?>
+     <div id="footer-columns" class="clearfix">
+        <?php
+    print render($page['footer_firstcolumn']);
+?>
+       <?php
+    print render($page['footer_secondcolumn']);
+?>
+       <?php
+    print render($page['footer_thirdcolumn']);
+?>
+       <?php
+    print render($page['footer_fourthcolumn']);
+?>
+     </div> <!-- /#footer-columns -->
+    <?php
+endif;
+?>
 
-    <?php if ($page['footer']): ?>
-      <div id="footer" class="clearfix" style = "border-top: none; position:relative;">
-        <?php print render($page['footer']); ?>
-      </div> <!-- /#footer -->
-    <?php endif; ?>
+    <?php
+if ($page['footer']):
+?>
+     <div id="footer" class="clearfix" style = "border-top: none;">
+        <?php
+    print render($page['footer']);
+?>
+     </div> <!-- /#footer -->
+    <?php
+endif;
+?>
 
-   <!-- /.section, /#footer-wrapper -->
+  </div></div> <!-- /.section, /#footer-wrapper -->
 
 </div></div> <!-- /#page, /#page-wrapper -->
