@@ -833,6 +833,9 @@ text-indent: -5em;
 								<li>
 									<a href="https://cat.ssdp.org/content/how-tofaq">How-to/FAQ</a>
 								</li>
+<li>
+					<a href="https://cat.ssdp.org/content/store">Store</a>
+				</li>
 							</ul>
 					</div>
 				</div>
@@ -851,6 +854,9 @@ text-indent: -5em;
 				</li>
 				<li>
 					<a href="https://cat.ssdp.org/content/how-tofaq">How-to/FAQ</a>
+				</li>
+<li>
+					<a href="https://cat.ssdp.org/content/store">Store</a>
 				</li>
 			</ul>
 		</div>
